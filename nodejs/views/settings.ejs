@@ -1,0 +1,60 @@
+<!-- views/pages/speaker.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./head %>
+    <style>
+        .image {
+            height: 30px;
+
+        }
+        .mdl-list__item:hover {
+            background: lightgrey;
+        }
+        .demo-card-notification.mdl-card {
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-drawer-button">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">SETTINGS</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div style="margin-right: auto; margin-left: auto;">
+                <img class="image" style="height: 200px;" src="http://vignette2.wikia.nocookie.net/blazingdragons/images/1/14/Under_Construction.png/revision/latest?cb=20140413050747">
+            </div>
+            <div style="margin-right: auto; margin-left: auto;">
+                <h2>Under Construction...</h2>
+            </div>
+        </div>
+    </main>
+
+    <% include ./footer-settings.ejs %>
+</div>
+</body>
+<script>
+    function gotoSettings() {
+        window.location = "/settings";
+    }
+
+    function gotoDevices() {
+        window.location = "/devices?userID=<%=UserID%>";
+    }
+
+    function gotoHome() {
+        window.location = "/profile";
+    }
+</script>
+
+</html>
